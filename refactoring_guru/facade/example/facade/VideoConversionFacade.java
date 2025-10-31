@@ -1,8 +1,7 @@
 package refactoring_guru.facade.example.facade;
 
-import refactoring_guru.facade.example.some_complex_media_library.*;
-
 import java.io.File;
+import refactoring_guru.facade.example.some_complex_media_library.*;
 
 public class VideoConversionFacade {
     public File convertVideo(String fileName, String format) {
@@ -19,6 +18,9 @@ public class VideoConversionFacade {
         VideoFile intermediateResult = BitrateReader.convert(buffer, destinationCodec);
         File result = (new AudioMixer()).fix(intermediateResult);
         System.out.println("VideoConversionFacade: conversion completed.");
+        
+
+        System.out.println("Fabio Gonzalez");
         return result;
     }
 }
